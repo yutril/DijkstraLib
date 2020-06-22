@@ -26,17 +26,4 @@ class Node(
     fun getDistance(id: String): Int?{
         return nextNodeDistances[id]
     }
-
-    fun getNearestNode(): Node {
-        var min: Int = Int.MAX_VALUE
-        var minNode: Node? = null
-        nextNodes.forEach {
-            val distance = nextNodeDistances[it.id]!!
-            if (min > distance) {
-                min = distance
-                minNode = it
-            }
-        }
-        return minNode!!
-    }
 }
