@@ -25,7 +25,7 @@ compileTestKotlin {
 
 jar {
     manifest {
-        attributes 'Main-Class' : 'io.github.yuuuu51.dijkstra.MainKt'
+        attributes 'Main-Class' : 'io.github.yuuuu51.dijkstralib.MainKt'
     }
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }

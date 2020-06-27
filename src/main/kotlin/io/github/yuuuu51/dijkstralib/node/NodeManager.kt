@@ -1,4 +1,4 @@
-package io.github.yuuuu51.dijkstra.node
+package io.github.yuuuu51.dijkstralib.node
 
 import com.beust.klaxon.JsonObject
 
