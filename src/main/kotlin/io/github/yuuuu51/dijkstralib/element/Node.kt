@@ -1,4 +1,4 @@
-package io.github.yuuuu51.dijkstralib.node
+package io.github.yuuuu51.dijkstralib.element
 
 import java.lang.Exception
 

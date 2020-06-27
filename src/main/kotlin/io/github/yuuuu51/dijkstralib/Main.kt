@@ -2,8 +2,8 @@ package io.github.yuuuu51.dijkstralib
 
 import com.beust.klaxon.JsonObject
 import com.beust.klaxon.Klaxon
-import io.github.yuuuu51.dijkstralib.node.Node
-import io.github.yuuuu51.dijkstralib.node.NodeManager
+import io.github.yuuuu51.dijkstralib.element.Node
+import io.github.yuuuu51.dijkstralib.element.NodeManager
 import java.nio.file.Files
 import java.nio.file.Paths
 
