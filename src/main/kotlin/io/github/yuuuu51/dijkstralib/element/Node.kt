@@ -1,11 +1,9 @@
 package io.github.yuuuu51.dijkstralib.element
 
-import java.lang.Exception
-
 class Node(
     val id: String,
     var name: String
-) {
+) : Element {
 
     var cost: Int = Int.MAX_VALUE
 
@@ -13,17 +11,10 @@ class Node(
 
     var parent: Node? = null
 
-    val nextNodes = mutableListOf<Node>()
+    val nextEdges = mutableListOf<Edge>()
 
-    private val nextNodeDistances = mutableMapOf<String, Int>()
-
-    fun addNextNode(node: Node, distance: Int) {
-        if (nextNodes.contains(node)) throw Exception("Node {${node.name}} is already added")
-        nextNodes.add(node)
-        nextNodeDistances[node.id] = distance
-    }
-
-    fun getDistance(id: String): Int?{
-        return nextNodeDistances[id]
+    fun addEdge(edge: Edge) {
+        nextEdges.add(edge)
+        edge.addNode(this)
     }
 }
