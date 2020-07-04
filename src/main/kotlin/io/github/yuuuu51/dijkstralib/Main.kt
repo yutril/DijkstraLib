@@ -19,12 +19,9 @@ fun main(args: Array<String>) {
     }
     val nodes = mutableMapOf<String, Node>()
     loadJson("/nodes.json").forEach {(id, data) ->
-        check(data is Map<*, *>)
-        check(data.containsKey("name") && data.containsKey("next"))
-        val node = ElementFactory.createNode(id, data["name"].toString())
-        val nextIds = data["next"]
-        check(nextIds is List<*>)
-        nextIds.forEach {
+        check(data is List<*>)
+        val node = ElementFactory.createNode(id)
+        data.forEach {
             check(it is String)
             edges[it]?.let { it1 -> node.addEdge(it1) }
         }
@@ -32,7 +29,7 @@ fun main(args: Array<String>) {
     }
     val dijkstra = DijkstraLib(nodes, edges)
     dijkstra.execute(START_NODE_ID, GOAL_NODE_ID).forEach {
-        println(it.name)
+        println("Node:${it.id}")
     }
 }
 

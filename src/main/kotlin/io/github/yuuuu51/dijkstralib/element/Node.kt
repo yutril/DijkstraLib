@@ -1,8 +1,7 @@
 package io.github.yuuuu51.dijkstralib.element
 
 class Node(
-    val id: String,
-    var name: String
+    val id: String
 ) : Element {
 
     var cost: Int = Int.MAX_VALUE
