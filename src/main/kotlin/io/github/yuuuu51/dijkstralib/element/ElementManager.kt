@@ -27,7 +27,7 @@ class ElementManager(
         var min: Float = Float.MAX_VALUE
         var minNode: Node? = null
         nodes.forEach {(_, node) ->
-            if (node.confirmed) return@forEach
+            if (node.isConfirmed()) return@forEach
             if (min > node.cost) {
                 min = node.cost
                 minNode = node
