@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.yuuuu51</groupId>
   <artifactId>DijkstraLib</artifactId>
-  <version>1.1.0</version>
+  <version>1.1.1</version>
   <dependencies>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
