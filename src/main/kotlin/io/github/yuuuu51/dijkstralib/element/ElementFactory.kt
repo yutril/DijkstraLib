@@ -7,7 +7,7 @@ class ElementFactory {
             return Node(id)
         }
 
-        fun createEdge(id: String, length: Float): Edge {
+        fun createEdge(id: String, length: Double): Edge {
             return Edge(id, length)
         }
     }

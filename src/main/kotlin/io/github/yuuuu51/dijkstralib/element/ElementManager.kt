@@ -24,7 +24,7 @@ class ElementManager(
     }
 
     fun getMinCostNode(): Node {
-        var min: Float = Float.MAX_VALUE
+        var min = Double.MAX_VALUE
         var minNode: Node? = null
         nodes.forEach {(_, node) ->
             if (node.isConfirmed()) return@forEach

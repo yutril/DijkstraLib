@@ -4,7 +4,7 @@ class Node(
     val id: String
 ) : Element {
 
-    var cost: Float = Float.MAX_VALUE
+    var cost = Double.MAX_VALUE
 
     var parent: Node? = null
 
