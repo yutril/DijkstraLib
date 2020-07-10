@@ -4,7 +4,7 @@ class Node(
     val id: String
 ) : Element {
 
-    var cost: Int = Int.MAX_VALUE
+    var cost: Float = Float.MAX_VALUE
 
     var confirmed: Boolean = false
 

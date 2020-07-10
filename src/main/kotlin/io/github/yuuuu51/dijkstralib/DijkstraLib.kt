@@ -13,7 +13,7 @@ class DijkstraLib(
 
     fun execute(startId: String, goalId: String): List<Node> {
         val startNode = manager.getNode(startId)
-        startNode.cost = 0
+        startNode.cost = 0F
         while (true) {
             val node = manager.getMinCostNode()
             node.confirmed= true
