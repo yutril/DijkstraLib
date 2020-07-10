@@ -2,7 +2,7 @@ package io.github.yuuuu51.dijkstralib.element
 
 class Edge(
     val id: String,
-    val length: Int
+    val length: Float
 ) : Element {
 
     val nextNodes = mutableListOf<Node>()

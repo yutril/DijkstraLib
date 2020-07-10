@@ -4,16 +4,24 @@ class Node(
     val id: String
 ) : Element {
 
-    var cost: Int = Int.MAX_VALUE
-
-    var confirmed: Boolean = false
+    var cost: Float = Float.MAX_VALUE
 
     var parent: Node? = null
 
     val nextEdges = mutableListOf<Edge>()
 
+    private var confirmed: Boolean = false
+
     fun addEdge(edge: Edge) {
         nextEdges.add(edge)
         edge.addNode(this)
+    }
+
+    fun isConfirmed(): Boolean {
+        return confirmed
+    }
+
+    fun confirm(confirmed: Boolean = true) {
+        this.confirmed = confirmed
     }
 }

@@ -13,15 +13,15 @@ class DijkstraLib(
 
     fun execute(startId: String, goalId: String): List<Node> {
         val startNode = manager.getNode(startId)
-        startNode.cost = 0
+        startNode.cost = 0F
         while (true) {
             val node = manager.getMinCostNode()
-            node.confirmed= true
+            node.confirm()
             if (node.id == goalId) break
             node.nextEdges.forEach { edge ->
                 edge.nextNodes.forEach loop@ {
                     if (it.id == node.id) return@loop
-                    if (it.confirmed) return@loop
+                    if (it.isConfirmed()) return@loop
                     val distance = edge.length
                     if (it.cost > node.cost + distance) {
                         it.cost = node.cost + distance
