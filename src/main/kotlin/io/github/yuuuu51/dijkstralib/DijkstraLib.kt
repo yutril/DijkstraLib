@@ -12,6 +12,7 @@ class DijkstraLib(
     private val manager = ElementManager(nodes, edges)
 
     fun execute(startId: String, goalId: String): List<Node> {
+        manager.reset()
         val startNode = manager.getNode(startId)
         startNode.cost = 0.0
         while (true) {

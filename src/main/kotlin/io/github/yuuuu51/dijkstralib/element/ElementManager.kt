@@ -1,9 +1,15 @@
 package io.github.yuuuu51.dijkstralib.element
 
+import kotlin.Cloneable
+
 class ElementManager(
     private var nodes: Map<String, Node>,
     private var edges: Map<String, Edge>
 ) {
+
+    val nodesCache = nodes.toMap()
+
+    val edgesCache = edges.toMap()
 
     fun existsNode(id: String): Boolean {
         return nodes.containsKey(id)
@@ -34,5 +40,10 @@ class ElementManager(
             }
         }
         return minNode!!
+    }
+
+    fun reset() {
+        nodes = nodesCache.toMap()
+        edges = edgesCache.toMap()
     }
 }
