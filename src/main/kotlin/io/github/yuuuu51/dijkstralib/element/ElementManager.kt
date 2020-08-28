@@ -11,7 +11,7 @@ class ElementManager(
 
     fun getNode(id: String): Node {
         require(existsNode(id))
-        return nodes[id]!!
+        return nodes[id] ?: error("Node $id not found")
     }
 
     fun existsEdge(id: String): Boolean {
@@ -20,7 +20,7 @@ class ElementManager(
 
     fun getEdge(id: String): Edge {
         require(existsEdge(id))
-        return edges[id]!!
+        return edges[id] ?: error("Edge $id not found")
     }
 
     fun getMinCostNode(): Node {

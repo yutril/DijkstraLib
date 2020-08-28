@@ -20,8 +20,7 @@ class DijkstraLib(
             if (node.id == goalId) break
             node.nextEdges.forEach { edge ->
                 edge.nextNodes.forEach loop@ {
-                    if (it.id == node.id) return@loop
-                    if (it.isConfirmed()) return@loop
+                    if (it.id == node.id || it.isConfirmed()) return@loop
                     val distance = edge.length
                     if (it.cost > node.cost + distance) {
                         it.cost = node.cost + distance
